@@ -11,6 +11,10 @@ let lastBlowTime = 0;
 startBtn.addEventListener('click', async () => {
   if (listening) return;
   try {
+    Array.from(document.querySelectorAll(".flame")).map(item=>{item.style.background='radial-gradient(circle at 30% 30%,#ffe28a 0,#ffb84d 50%,#ff6f3c 100%)'
+      item.style.transform='translateX(-50%)'
+      item.style.boxShadow='0 6px 12px rgba(255,120,30,0.25)'
+    })
     await initMic();
     startBtn.textContent = 'Listening... Blow to extinguish!';
   } catch (err) {
