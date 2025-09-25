@@ -69,6 +69,7 @@ function onBlowDetected(){
 function extinguishCandles(){
   flames.forEach(f => {
     f.classList.add('out');
+    f.style.opcacity='0 !important'
   });
 }
 
