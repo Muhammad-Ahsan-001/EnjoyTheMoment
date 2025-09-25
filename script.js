@@ -60,6 +60,7 @@ function checkBlow(){
 
 function onBlowDetected(){
   message.textContent = 'Nice! Candles blown 🎉';
+  startBtn.textContent='Blow again for more confetti!!'
   extinguishCandles();
   launchConfetti();
   playHappyAudio();
