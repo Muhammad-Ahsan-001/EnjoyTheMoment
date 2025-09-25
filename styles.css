@@ -1,0 +1,25 @@
+:root{ --bg:#0f1724; --card:#0b1220; --accent:#ffb86b; --muted:#9aa8b2; }
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#081021,var(--bg));color:#fff}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{width:100%;max-width:420px;background:rgba(255,255,255,0.03);padding:18px;border-radius:14px;text-align:center;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+h1{font-size:1.5rem;margin:8px 0}
+.subtitle{color:var(--muted);margin:0 0 12px 0}
+.cake-wrap{display:flex;justify-content:center;margin:12px 0 20px}
+.cake{position:relative;width:260px;height:160px}
+.layer{position:absolute;left:10%;right:10%;bottom:0;height:70px;background:linear-gradient(180deg,#ff9f80,#ff7f50);border-radius:12px}
+.layer.small{bottom:68px;height:50px;left:20%;right:20%;background:linear-gradient(180deg,#ffd7b0,#ffb86b)}
+.candles{position:absolute;left:50%;transform:translateX(-50%);bottom:120px;display:flex;gap:18px}
+.candle{width:14px;height:40px;background:#fff;border-radius:4px;position:relative;box-shadow:inset 0 -8px 0 rgba(0,0,0,0.06)}
+.flame{position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:18px;height:18px;background:radial-gradient(circle at 30% 30%,#ffe28a 0,#ffb84d 50%,#ff6f3c 100%);border-radius:50%;box-shadow:0 6px 12px rgba(255,120,30,0.25);transition:opacity .6s, transform .6s}
+.flame.out{opacity:0;transform:translateX(-50%) scale(.6)}
+.btn{margin-top:10px;padding:12px 18px;border-radius:10px;border:0;background:linear-gradient(90deg,#ff8b6b,#ffb86b);font-weight:600;color:#061423;box-shadow:0 6px 20px rgba(255,120,40,0.12)}
+.message{margin-top:12px;color:var(--muted);font-size:0.95rem}
+
+/* make everything look better on small phones */
+@media (max-width:400px){
+  .card{padding:14px;border-radius:12px}
+  .cake{width:200px;height:130px}
+  .candles{gap:14px}
+  h1{font-size:1.25rem}
+}
